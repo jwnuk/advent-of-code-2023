@@ -47,20 +47,13 @@ for line in lines:
 
     for key in digits.keys():
         line = line.replace(key, key + digits[key] + key)
-
-    # for key in digits.keys():
-    #     if line.find(key) > -1:
-    #         print(line, key)
-    #         line = line[:line.find(key)] + digits[key] + line[line.find(key) + 1:]
     
     for char in line:
 
         if char.isnumeric():
             calibration_val += char
     
-    # print(calibration_val)
     calibration_val = int(calibration_val[0] + calibration_val[-1])
-    print(line, line, calibration_val, '\n')
     calibration_sum_2 += calibration_val
 
 print(calibration_sum_2)
